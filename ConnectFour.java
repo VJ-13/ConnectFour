@@ -79,7 +79,15 @@ public class ConnectFour {
 		// Player 2 Setup
 		if (choose == 1) {
 			System.out.println("AI is selected");
-			game.setPlayer2(new AIPlayer('A', board, "AI"));
+			if (player1.charAt(0) == 'A'){
+				game.setPlayer2(new AIPlayer('I', board, "AI"));
+				System.out.println("AI is going to play as I");
+			}
+			else
+			{
+				game.setPlayer2(new AIPlayer('A', board, "AI"));
+				System.out.println("AI is going to play as A");
+			}
 		} else {
 			String player2;
 			System.out.println("Player 2 Name: ");
